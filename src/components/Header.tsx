@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import BtnGradient from "./BtnGradient";
 type INavLink = { name: string; route: string }[];
 const Header = () => {
   const navLinks: INavLink = [
@@ -20,17 +21,23 @@ const Header = () => {
   }
   const variants: Variants = {
     open: { opacity: 1, x: 0, y: 0, display: "block" },
-    closed: { opacity: 0, x: 100, display: "none" },
+    closed: { opacity: 0, x: 180, display: "none" },
   };
 
   return (
-    <header className="p-5 relative">
+    <header className="p-5 relative lg:px-52 lg:flex w-full lg:justify-between">
       <div className="flex justify-between items-center text-white-standard">
         <Image src="/logo.svg" width={150} height={100} alt="Logo pessoal" />
-        <Hamburger rounded size={25} onToggle={toggleNav} toggled={showNav} />
+        <div className="lg:hidden">
+          <Hamburger rounded size={25} onToggle={toggleNav} toggled={showNav} />
+        </div>
       </div>
-
-      <motion.div variants={variants} animate={showNav ? "open" : "closed"}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        variants={variants}
+        animate={showNav ? "open" : "closed"}
+        transition={{ duration: 0.2 }}
+      >
         <nav className="bg-background absolute w-full h-screen left-0 py-5">
           <ul className="flex flex-col items-center font-inter text-lg font-normal w-full">
             {navLinks.map((link, index) => (
@@ -41,6 +48,20 @@ const Header = () => {
           </ul>
         </nav>
       </motion.div>
+      <nav className="hidden lg:!flex justify-around items-center">
+        <ul className="flex">
+          {navLinks.map((link, index) =>
+            index !== 4 ? (
+              <li key={index} className="p-2">
+                <Link href={link.route}>{link.name}</Link>
+              </li>
+            ) : null
+          )}
+        </ul>
+      </nav>
+      <div className="hidden lg:!flex">
+        <BtnGradient url="#contact" label="Contate-me" />
+      </div>
     </header>
   );
 };

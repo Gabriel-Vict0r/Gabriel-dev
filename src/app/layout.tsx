@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${bebas.className} ${inter.className} bg-background text-white-standard`}
+        className={`${inter.className}${bebas.className} bg-background text-white-standard`}
       >
         <Header />
         {children}
