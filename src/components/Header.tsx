@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <header className="p-5 relative lg:px-52 lg:flex w-full lg:justify-between">
+    <header className="p-5 lg:px-52 lg:flex w-full lg:justify-between fixed top-0">
       <div className="flex justify-between items-center text-white-standard">
         <Image src="/logo.svg" width={150} height={100} alt="Logo pessoal" />
         <div className="lg:hidden">
