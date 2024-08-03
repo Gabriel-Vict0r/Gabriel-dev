@@ -29,8 +29,8 @@ export default function RootLayout({
       >
         <Image
           src="/section1-light-left.png"
-          width={833.19}
-          height={562.5}
+          width={433.19}
+          height={262.5}
           alt="ponto de luz"
           className="absolute -left-4 -z-10 top-0 md:-top-10 md:-left-24"
         />

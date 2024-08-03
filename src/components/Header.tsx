@@ -3,9 +3,10 @@ import { MotionConfig, Variants } from "framer-motion";
 import Hamburger from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import BtnGradient from "./BtnGradient";
+import { Events, animateScroll as scroll } from "react-scroll";
 type INavLink = { name: string; route: string }[];
 const Header = () => {
   const navLinks: INavLink = [
@@ -24,8 +25,22 @@ const Header = () => {
     closed: { opacity: 0, x: 180, display: "none" },
   };
 
+  const [scrolling, setScrolling] = useState<boolean>(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () =>
+      window.scrollY > 20 ? setScrolling(true) : setScrolling(false)
+    );
+  }, []);
+
+  const handleScroll = () => {
+    console.log("scroll ", scrolling);
+  };
   return (
-    <header className="p-5 lg:px-52 lg:flex w-full lg:justify-between fixed top-0">
+    <header
+      className={`p-5 xl:px-52 lg:flex w-full lg:justify-between fixed top-0 ${
+        scrolling ? "bg-background" : ""
+      } z-50 lg:px-20`}
+    >
       <div className="flex justify-between items-center text-white-standard">
         <Image src="/logo.svg" width={150} height={100} alt="Logo pessoal" />
         <div className="lg:hidden">
