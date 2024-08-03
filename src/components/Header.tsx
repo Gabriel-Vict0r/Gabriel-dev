@@ -10,7 +10,7 @@ import { Events, animateScroll as scroll } from "react-scroll";
 type INavLink = { name: string; route: string }[];
 const Header = () => {
   const navLinks: INavLink = [
-    { name: "Início", route: "/" },
+    { name: "Início", route: "#inicio" },
     { name: "Sobre", route: "#about" },
     { name: "Projetos", route: "#projects" },
     { name: "Serviços", route: "#services" },
@@ -39,7 +39,7 @@ const Header = () => {
     <header
       className={`p-5 xl:px-52 lg:flex w-full lg:justify-between fixed top-0 ${
         scrolling ? "bg-background" : ""
-      } z-50 lg:px-20`}
+      } z-50 lg:px-20 md:px-10`}
     >
       <div className="flex justify-between items-center text-white-standard">
         <Image src="/logo.svg" width={150} height={100} alt="Logo pessoal" />
@@ -56,7 +56,7 @@ const Header = () => {
         <nav className="bg-background absolute w-full h-screen left-0 py-5">
           <ul className="flex flex-col items-center font-inter text-lg font-normal w-full">
             {navLinks.map((link, index) => (
-              <li key={index} className="p-2">
+              <li key={index} className="p-2 ">
                 <Link href={link.route}>{link.name}</Link>
               </li>
             ))}
@@ -68,7 +68,12 @@ const Header = () => {
           {navLinks.map((link, index) =>
             index !== 4 ? (
               <li key={index} className="p-2">
-                <Link href={link.route}>{link.name}</Link>
+                <Link
+                  href={link.route}
+                  className="hover:border-b-2 border-blue-primary border-solid"
+                >
+                  {link.name}
+                </Link>
               </li>
             ) : null
           )}

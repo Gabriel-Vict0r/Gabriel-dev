@@ -1,11 +1,23 @@
+import DivSeparator from "@/components/DivSeparator";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="mt-24">
-      <section className="flex flex-col gap-5 items-center md:flex-row xl:px-52 lg:mt-44 lg:px-20">
-        <div className="flex flex-col gap-5 p-5 md:w-1/2">
-          <h1 className="font-semibold text-4xl text-white-standard md:text-3xl lg:text-4xl xl:text-5xl">
+      <section
+        className="flex flex-col gap-5 items-center md:flex-row xl:px-52 lg:mt-44 lg:px-20 md:px-10"
+        id="inicio"
+      >
+        <div className="flex flex-col gap-5 p-5 md:w-1/2 relative">
+          <Image
+            src="/Circulo.svg"
+            width={399}
+            height={399}
+            alt="circulo"
+            className="hidden lg:!block absolute -top-20 -left-20"
+          />
+          <h1 className="font-semibold text-3xl text-white-standard md:text-3xl lg:text-4xl xl:text-5xl">
             Olá, meu nome é Gabriel Victor, um{" "}
             <span className="text-blue-primary bg-clip-text">
               Desenvolvedor FullStack
@@ -33,6 +45,7 @@ export default function Home() {
           className="hidden md:!block absolute right-0 -z-10 md:top-10 lg:top-20 lg:w-[35%]"
         />
       </section>
+      <DivSeparator />
     </main>
   );
 }
