@@ -19,6 +19,8 @@ const config: Config = {
         'background': '#181C2B',
         'bg-secondary': '#252C41',
         'blue-primary': '#2361FF',
+        'gradient-card-one': '#21283E',
+        'gradient-card-two': '#394159',
         'blue-secondary': '#1C1DFF',
       },
       fontFamily: {

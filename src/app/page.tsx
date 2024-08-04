@@ -1,4 +1,7 @@
+import BtnGradient from "@/components/BtnGradient";
+import CardService from "@/components/CardService";
 import DivSeparator from "@/components/DivSeparator";
+import { cardsContent } from "@/utils/content/cards";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +9,7 @@ export default function Home() {
   return (
     <main className="mt-24">
       <section
-        className="flex flex-col gap-5 items-center md:flex-row xl:px-52 lg:mt-44 lg:px-20 md:px-10"
+        className="flex flex-col gap-5 items-center md:flex-row lg:mt-44 lg:px-20 xl:px-52 md:px-10"
         id="inicio"
       >
         <div className="flex flex-col gap-5 p-5 md:w-1/2 relative">
@@ -46,6 +49,47 @@ export default function Home() {
         />
       </section>
       <DivSeparator />
+      <section className="p-5 flex flex-col gap-5 md:flex-row md:flex-wrap  justify-center lg:px-20 xl:px-52 relative">
+        <Image
+          src="/Elemento 1.svg"
+          width={249}
+          height={573}
+          alt="elemento 1"
+          className="absolute left-0 -z-10"
+        />
+        <Image
+          src="/section2-light-right.png"
+          width={324.23}
+          height={330.72}
+          alt="elemento 2"
+          className="absolute -top-10 right-0 -z-10"
+        />
+        {cardsContent.map((card, index) => (
+          <CardService
+            title={card.title}
+            paragraph={card.paragraph}
+            imageUrl={card.imageUrl}
+            key={index}
+          />
+        ))}
+        <Image
+          src="/section2-light-left.png"
+          width={279.82}
+          height={167.76}
+          alt="ponto de luz"
+          className="absolute left-0 bottom-0 -z-10"
+        />
+        <Image
+          src="/retangle-decorator.svg"
+          width={340}
+          height={340}
+          alt="quadro com ponto de luz"
+          className="absolute -bottom-2 right-0 md:-bottom-7 md:right-2 lg:right-16 xl:right-48"
+        />
+      </section>
+      <div className="my-16 w-full text-center">
+        <BtnGradient label="Tirar idéia do papel" url="#form" />
+      </div>
     </main>
   );
 }
