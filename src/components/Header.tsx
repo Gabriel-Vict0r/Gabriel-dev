@@ -57,7 +57,9 @@ const Header = () => {
           <ul className="flex flex-col items-center font-inter text-lg font-normal w-full">
             {navLinks.map((link, index) => (
               <li key={index} className="p-2 ">
-                <Link href={link.route}>{link.name}</Link>
+                <Link href={link.route} onClick={toggleNav}>
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>

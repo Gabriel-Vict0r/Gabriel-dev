@@ -26,6 +26,9 @@ const config: Config = {
       fontFamily: {
         'bebas': 'bebas',
         'inter': 'Inter'
+      },
+      boxShadow: {
+        'shadow-blue': '0px 4px 90px 0px #2361FF4D',
       }
     },
   },

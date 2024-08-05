@@ -1,7 +1,12 @@
 import BtnGradient from "@/components/BtnGradient";
 import CardService from "@/components/CardService";
+import CarouselComponent from "@/components/Carrousel";
+import Carrousel from "@/components/Carrousel";
+import ContainerHabilities from "@/components/ContainerHabilities";
 import DivSeparator from "@/components/DivSeparator";
+import Hability from "@/components/Hability";
 import { cardsContent } from "@/utils/content/cards";
+import { habBackEnd, habFrontEnd } from "@/utils/content/habilities";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -48,7 +53,11 @@ export default function Home() {
           className="hidden md:!block absolute right-0 -z-10 md:top-10 lg:top-20 lg:w-[35%]"
         />
       </section>
-      <DivSeparator />
+      <DivSeparator
+        id="habilities"
+        title="Serviços"
+        text="Como eu posso te ajudar?"
+      />
       <section className="p-5 flex flex-col gap-5 md:flex-row md:flex-wrap  justify-center lg:px-20 xl:px-52 relative">
         <Image
           src="/Elemento 1.svg"
@@ -90,6 +99,41 @@ export default function Home() {
       <div className="my-16 w-full text-center">
         <BtnGradient label="Tirar idéia do papel" url="#form" />
       </div>
+      <DivSeparator
+        title="Habilidades"
+        text="Minhas principais habilidades técnicas"
+        id="habilities"
+      />
+      <section className="lg:px-20 xl:px-52 p-5 flex flex-col gap-10 relative">
+        <hr className="border border-bg-secondary border-solid" />
+        <Image
+          src="Elemento 2.svg"
+          width={162.9}
+          height={622}
+          alt="Elemento decorativo"
+          className="absolute right-0 -z-10"
+        />
+        <ContainerHabilities title="Front-end">
+          {habFrontEnd.map((hability, index) => (
+            <Hability name={hability.name} icon={hability.icon} key={index} />
+          ))}
+        </ContainerHabilities>
+        <ContainerHabilities title="Back-end">
+          {habBackEnd.map((hability, index) => (
+            <Hability name={hability.name} icon={hability.icon} key={index} />
+          ))}
+        </ContainerHabilities>
+      </section>
+      <DivSeparator
+        title="Projetos"
+        text="Uma breve apresentação dos projetos realizados. Alguns deles 
+fazem parte do meu trabalho como freelancer e outros são 
+projetos criados para prática de estudos."
+        id="habilities"
+      />
+      <section className="lg:px-20 xl:px-52 p-5">
+        <CarouselComponent />
+      </section>
     </main>
   );
 }
