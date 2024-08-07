@@ -6,11 +6,19 @@ import CardCarousel from "./CardCarousel";
 import ArrowCarousel from "./ArrowCarousel";
 import { FaChevronLeft } from "react-icons/fa";
 import { Sides } from "@/models/enums/all";
+import { IRepositoryProject } from "@/models/interfaces/all";
 
 type Props = {};
 
 const CarouselComponent = (props: Props) => {
-  const [projects, setProjects] = useState([]);
+  const nameProjects = [
+    "be-happy",
+    "ciphery",
+    "housafe",
+    "xml-discover",
+    "next-petschirmer",
+  ];
+  const [projects, setProjects] = useState<IRepositoryProject[]>([]);
   useEffect(() => {
     const getProjects = async () => {
       const request = await fetch(process.env.URL_GIT!, {
@@ -20,12 +28,17 @@ const CarouselComponent = (props: Props) => {
       });
       const result = await request.json();
       console.log(typeof result);
-      const filtered = result.filter((project) => project.license !== null);
+      const filtered = result.map((project: IRepositoryProject) => {
+        let result = nameProjects.filter((name) => name === project.name);
+        if (result.length > 0) {
+          console.log("resultado", result, project);
+        }
+      });
       setProjects(filtered);
     };
     getProjects();
   }, []);
-  projects.map((project) => console.log(project));
+  //projects.map((project) => console.log(project));
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
