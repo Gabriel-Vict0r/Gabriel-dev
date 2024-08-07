@@ -1,11 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
+import { FaLink } from "react-icons/fa6";
+import LinkCard from "./LinkCard";
 type Props = {};
 
 const CardCarousel = (props: Props) => {
   return (
-    <div className=" bg-bg-secondary rounded-xl">
+    <div className=" bg-bg-secondary rounded-xl mx-4">
       <Image
         src="/cover.png"
         width={400}
@@ -20,8 +23,13 @@ const CardCarousel = (props: Props) => {
           Aplicação web que visa promover a visibilidade de instituições de
           acolhimento.
         </p>
-        <div>
-          <FaGithub />
+        <div className="flex itens-center justify-end gap-5 text-2xl">
+          <LinkCard link="">
+            <FaGithub />
+          </LinkCard>
+          <LinkCard link="">
+            <FaLink />
+          </LinkCard>
         </div>
       </div>
     </div>
