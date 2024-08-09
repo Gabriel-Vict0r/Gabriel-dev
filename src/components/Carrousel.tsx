@@ -27,18 +27,19 @@ const CarouselComponent = (props: Props) => {
         },
       });
       const result = await request.json();
-      console.log(typeof result);
-      const filtered = result.map((project: IRepositoryProject) => {
+      //console.log(typeof result);
+      result.map((project: IRepositoryProject, index: number) => {
         let result = nameProjects.filter((name) => name === project.name);
         if (result.length > 0) {
-          console.log("resultado", result, project);
+          //console.log("rodou o ", result[0]);
+          setProjects((prev) => [...prev, project]);
         }
       });
-      setProjects(filtered);
     };
     getProjects();
   }, []);
-  //projects.map((project) => console.log(project));
+  projects.map((project) => console.log(project));
+  //console.log(projects);
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -61,7 +62,7 @@ const CarouselComponent = (props: Props) => {
     <Carousel
       swipeable={true}
       draggable={true}
-      showDots={true}
+      showDots={false}
       arrows
       responsive={responsive}
       ssr={false} // means to render carousel on server-side.
@@ -77,9 +78,10 @@ const CarouselComponent = (props: Props) => {
       itemClass="carousel-item-padding-40-px"
       className="w-full"
     >
-      <CardCarousel />
-      <CardCarousel />
-      <CardCarousel />
+      {projects.map((project) => (
+        <CardCarousel props={project} key={project.id} />
+      ))}
+      {/* <CardCarousel props={projects[0]} /> */}
     </Carousel>
   );
 };
