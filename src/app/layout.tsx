@@ -3,7 +3,7 @@ import { Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Image from "next/image";
-
+import localFont from "next/font/local";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -12,6 +12,7 @@ const bebas = Bebas_Neue({
   subsets: ["latin"],
   weight: ["400"],
 });
+const atary = localFont({ src: "../fonts/Atary_Demo.otf" });
 export const metadata: Metadata = {
   title: "Portfólio",
   description: "Portfólio de projetos pessoais.",
@@ -24,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${inter.className}${bebas.className} bg-background text-white-standard`}
-      >
+      <body className={`${inter.className} bg-background text-white-standard`}>
         <Image
           src="/section1-light-left.png"
           width={433.19}

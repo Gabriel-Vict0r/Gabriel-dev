@@ -24,11 +24,20 @@ const config: Config = {
         'blue-secondary': '#1C1DFF',
       },
       fontFamily: {
-        'bebas': "'Bebas Neue', sans-serif",
+        'atary': "'Atary_Demo', sans-serif",
         'inter': 'Inter'
       },
       boxShadow: {
         'shadow-blue': '0px 4px 90px 0px #2361FF4D',
+      },
+      keyframes: {
+        'move-words': {
+          '0%': { left: '100%' },
+          '100%': { left: '-100%' }
+        }
+      },
+      animation: {
+        'words-move': 'move-words 20s linear infinite'
       }
     },
   },

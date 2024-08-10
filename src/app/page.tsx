@@ -142,11 +142,42 @@ projetos criados para prática de estudos."
         <div className="w-[591px] lg:w-[991.15px] h-[562.5px] bg-blue-primary rotate-[84.91deg] rounded-full blur-[300px] absolute left-[-549px] -z-10"></div>
         <CarouselComponent />
       </section>
-      <div className="w-full bg-gradient-to-r from-blue-primary to-blue-secondary text-center py-10">
-        <h2 className="font-bold font-bebas">
-          Desenvolvedor FullStack &lt;/&gt;
+      <div className="w-full bg-gradient-to-r from-blue-primary to-blue-secondary text-center py-10  overflow-hidden my-10">
+        <h2 className="font-bold font-atary text-3xl lg:text-5xl relative animate-words-move m-0 text-nowrap tracking-widest">
+          Desenvolvedor FullStack &lt;/&gt; Desenvolvedor FullStack &lt;/&gt;
         </h2>
       </div>
+      <section className="p-5 flex flex-col gap-5 items-center md:flex-row lg:px-20 xl:px-52 xl:gap-20">
+        <div className="w-[591px] lg:w-[991.15px] h-[562.5px] bg-blue-primary rotate-[84.91deg] rounded-full blur-[300px] absolute left-[-549px] -z-10"></div>
+        <Image
+          src="/profile.png"
+          width={428.56}
+          height={462.04}
+          alt="Minha foto de perfil"
+          className="w-[70%] md:w-[40%]"
+        />
+        <article className="flex flex-col gap-5 relative mt-10 md:w-[80%]">
+          <h3 className="font-semibold text-3xl">Quem sou eu</h3>
+          <p className="font-extralight w-11/12 text-base">
+            Desenvolvedor FullStack apaixonado por transformar ideias em
+            soluções digitais eficientes e inovadoras. Com mais de 2 anos de
+            experiência na criação de aplicações robustas e escaláveis, sou
+            formado pelo IFBA - campus Barreiras e atualmente curso Análise e
+            Desenvolvimento de Sistemas. Minha expertise abrange um sólido
+            domínio de JavaScript/TypeScript, Next.js, Node.js, PostgreSQL,
+            entre outras ferramentas essenciais do ecossistema web. Atuo como
+            desenvolvedor de software, focado em entregar resultados que
+            combinam qualidade técnica e inovação.
+          </p>
+          <Image
+            src="circle-about-me.svg"
+            width={449.96}
+            height={449.96}
+            alt="circulo decorativo"
+            className="absolute -top-5 -right-5 w-[70%] md:-top-20 xl:-top-32 xl:-right-20"
+          />
+        </article>
+      </section>
     </main>
   );
 }
