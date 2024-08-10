@@ -6,7 +6,7 @@ import CardCarousel from "./CardCarousel";
 import ArrowCarousel from "./ArrowCarousel";
 import { FaChevronLeft } from "react-icons/fa";
 import { Sides } from "@/models/enums/all";
-import { IRepositoryProject } from "@/models/interfaces/all";
+import { IContributions, IRepositoryProject } from "@/models/interfaces/all";
 
 type Props = {};
 
@@ -39,7 +39,14 @@ const CarouselComponent = (props: Props) => {
     getProjects();
   }, []);
   projects.map((project) => console.log(project));
-  //console.log(projects);
+
+  const petSchirmer: IContributions = {
+    name: "Pet Schirmer",
+    description:
+      "Site institucional dedicado ao bem-estar animal, oferecendo serviços de cuidados para pets.",
+    html_url: "https://github.com/deniseschirmer/next-petschirmer",
+    homepage: "https://next-petschirmer-deniseschirmer.vercel.app/",
+  };
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -67,9 +74,9 @@ const CarouselComponent = (props: Props) => {
       responsive={responsive}
       ssr={false} // means to render carousel on server-side.
       infinite={true}
-      autoPlaySpeed={1000}
+      autoPlaySpeed={500}
       keyBoardControl={true}
-      customTransition="all .6"
+      customTransition="transform 300ms ease-in-out"
       transitionDuration={1300}
       customRightArrow={<ArrowCarousel side={Sides.RIGHT} />}
       customLeftArrow={<ArrowCarousel side={Sides.LEFT} />}
@@ -81,7 +88,7 @@ const CarouselComponent = (props: Props) => {
       {projects.map((project) => (
         <CardCarousel props={project} key={project.id} />
       ))}
-      {/* <CardCarousel props={projects[0]} /> */}
+      <CardCarousel props={petSchirmer} />
     </Carousel>
   );
 };

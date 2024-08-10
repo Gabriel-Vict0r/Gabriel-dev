@@ -24,7 +24,7 @@ const config: Config = {
         'blue-secondary': '#1C1DFF',
       },
       fontFamily: {
-        'bebas': 'bebas',
+        'bebas': "'Bebas Neue', sans-serif",
         'inter': 'Inter'
       },
       boxShadow: {

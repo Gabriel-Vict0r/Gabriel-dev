@@ -122,3 +122,9 @@ export interface IRepositoryProject {
     watchers: number;
     default_branch: string;
 }
+export interface IContributions {
+    name: string;
+    description: string;
+    html_url: string;
+    homepage: string;
+}

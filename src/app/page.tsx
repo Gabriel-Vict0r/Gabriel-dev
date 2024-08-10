@@ -131,9 +131,22 @@ fazem parte do meu trabalho como freelancer e outros são
 projetos criados para prática de estudos."
         id="habilities"
       />
-      <section className="lg:px-20 xl:px-52 p-5">
+      <section className="lg:px-20 xl:px-52 p-5 relative">
+        <Image
+          src="Elemento 3.svg"
+          width={178.62}
+          height={280.94}
+          alt="Elemento decorativo"
+          className=" absolute left-0 -z-10 top-36"
+        />
+        <div className="w-[591px] lg:w-[991.15px] h-[562.5px] bg-blue-primary rotate-[84.91deg] rounded-full blur-[300px] absolute left-[-549px] -z-10"></div>
         <CarouselComponent />
       </section>
+      <div className="w-full bg-gradient-to-r from-blue-primary to-blue-secondary text-center py-10">
+        <h2 className="font-bold font-bebas">
+          Desenvolvedor FullStack &lt;/&gt;
+        </h2>
+      </div>
     </main>
   );
 }

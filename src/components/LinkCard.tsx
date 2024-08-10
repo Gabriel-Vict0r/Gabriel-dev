@@ -8,7 +8,10 @@ type Props = {
 
 const LinkCard = ({ children, link }: Props) => {
   return (
-    <Link href={link} className="p-2 rounded-full hover:bg-blue-primary">
+    <Link
+      href={link}
+      className="p-2 rounded-full hover:bg-blue-primary transition-all"
+    >
       {children}
     </Link>
   );
