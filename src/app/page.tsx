@@ -4,6 +4,7 @@ import CarouselComponent from "@/components/Carrousel";
 import Carrousel from "@/components/Carrousel";
 import ContainerHabilities from "@/components/ContainerHabilities";
 import DivSeparator from "@/components/DivSeparator";
+import Form from "@/components/Form";
 import Hability from "@/components/Hability";
 import { cardsContent } from "@/utils/content/cards";
 import { habBackEnd, habFrontEnd } from "@/utils/content/habilities";
@@ -127,9 +128,9 @@ export default function Home() {
       <DivSeparator
         title="Projetos"
         text="Uma breve apresentação dos projetos realizados. Alguns deles 
-fazem parte do meu trabalho como freelancer e outros são 
-projetos criados para prática de estudos."
-        id="habilities"
+        fazem parte do meu trabalho como freelancer e outros são 
+        projetos criados para prática de estudos."
+        id="projects"
       />
       <section className="lg:px-20 xl:px-52 p-5 relative">
         <Image
@@ -177,6 +178,12 @@ projetos criados para prática de estudos."
             className="absolute -top-5 -right-5 w-[70%] md:-top-20 xl:-top-32 xl:-right-20"
           />
         </article>
+      </section>
+
+      <section className="p-5 my-5">
+        <div className="border-t-2 border-bg-secondary border-solid w-full py-10">
+          <Form />
+        </div>
       </section>
     </main>
   );

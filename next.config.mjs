@@ -6,7 +6,6 @@ const nextConfig = {
   },
   reactStrictMode: false,
   images: {
-    domains: ["github.com"],
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {

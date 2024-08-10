@@ -43,7 +43,7 @@ const CardCarousel = ({
       />
       <div className="p-5 flex flex-col gap-3 h-[204px] justify-between">
         <h5 className="font-semibold text-xl">{props.name}</h5>
-        <p>{props.description}</p>
+        <p className="font-extralight text-base">{props.description}</p>
         <div className="flex itens-center justify-end gap-5 text-2xl">
           <LinkCard link={props.html_url}>
             <FaGithub />
