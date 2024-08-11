@@ -38,7 +38,7 @@ const CarouselComponent = (props: Props) => {
     };
     getProjects();
   }, []);
-  projects.map((project) => console.log(project));
+  //projects.map((project) => console.log(project));
 
   const petSchirmer: IContributions = {
     name: "Pet Schirmer",

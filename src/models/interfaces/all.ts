@@ -128,3 +128,11 @@ export interface IContributions {
     html_url: string;
     homepage: string;
 }
+
+export interface IFormData {
+    name: string;
+    subject: string;
+    message: string;
+    email: string;
+    phone: string;
+}

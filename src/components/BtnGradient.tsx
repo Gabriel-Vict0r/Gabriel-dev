@@ -10,7 +10,7 @@ const BtnGradient = (props: Props) => {
   return (
     <Link
       href={props.url}
-      className="font-semibold text-xl bg-gradient-to-r from-blue-primary to-blue-secondary py-3 px-5 rounded-full"
+      className="font-semibold text-xl bg-gradient-to-r from-blue-primary to-blue-secondary py-3 px-5 rounded-full hover:brightness-125 transition-all"
     >
       {props.label}
     </Link>

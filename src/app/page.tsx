@@ -98,7 +98,7 @@ export default function Home() {
         />
       </section>
       <div className="my-16 w-full text-center">
-        <BtnGradient label="Tirar idéia do papel" url="#form" />
+        <BtnGradient label="Tirar idéia do papel" url="#contact" />
       </div>
       <DivSeparator
         title="Habilidades"
@@ -149,7 +149,10 @@ export default function Home() {
         </h2>
       </div>
       <section className="p-5 flex flex-col gap-5 items-center md:flex-row lg:px-20 xl:px-52 xl:gap-20">
-        <div className="w-[591px] lg:w-[991.15px] h-[562.5px] bg-blue-primary rotate-[84.91deg] rounded-full blur-[300px] absolute left-[-549px] -z-10"></div>
+        <div
+          className="w-[591px] lg:w-[991.15px] h-[562.5px] bg-blue-primary rotate-[84.91deg] rounded-full blur-[300px] absolute left-[-549px] -z-10"
+          id="about"
+        ></div>
         <Image
           src="/profile.png"
           width={428.56}
@@ -180,8 +183,11 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="p-5 my-5">
-        <div className="border-t-2 border-bg-secondary border-solid w-full py-10">
+      <section className="p-5 my-5 lg:px-20 xl:px-52">
+        <div
+          className="border-t-2 border-bg-secondary border-solid w-full py-10"
+          id="contact"
+        >
           <Form />
         </div>
       </section>
