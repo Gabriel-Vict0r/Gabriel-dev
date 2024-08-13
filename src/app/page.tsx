@@ -164,14 +164,14 @@ export default function Home() {
           <h3 className="font-semibold text-3xl">Quem sou eu</h3>
           <p className="font-extralight w-11/12 text-base">
             Desenvolvedor FullStack apaixonado por transformar ideias em
-            soluções digitais eficientes e inovadoras. Com mais de 2 anos de
+            soluções digitais eficientes e inovadoras. Com um bom tempo de
             experiência na criação de aplicações robustas e escaláveis, sou
             formado pelo IFBA - campus Barreiras e atualmente curso Análise e
-            Desenvolvimento de Sistemas. Minha expertise abrange um sólido
-            domínio de JavaScript/TypeScript, Next.js, Node.js, PostgreSQL,
-            entre outras ferramentas essenciais do ecossistema web. Atuo como
-            desenvolvedor de software, focado em entregar resultados que
-            combinam qualidade técnica e inovação.
+            Desenvolvimento de Sistemas. Possuo sólidos conhecimentos das
+            linguagens em JavaScript/TypeScript, Next.js, Node.js, PostgreSQL,
+            entre outras ferramentas essenciais do ecossistema web. Atualmente
+            atuo como desenvolvedor de software, focado em entregar resultados
+            que combinam qualidade técnica e inovação.
           </p>
           <Image
             src="circle-about-me.svg"
