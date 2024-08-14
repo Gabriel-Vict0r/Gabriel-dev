@@ -139,4 +139,5 @@ export interface IFormData {
 export interface ILinkFooter {
     url: string;
     children: React.ReactNode;
+    label: string;
 };

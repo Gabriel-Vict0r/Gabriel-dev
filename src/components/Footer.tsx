@@ -12,7 +12,7 @@ const Footer = (props: Props) => {
       </p>
       <div className="flex gap-5 w-full items-center justify-center lg:w-auto">
         {contentLinksFooter.map((content, i) => (
-          <LinkFooter url={content.url} key={i}>
+          <LinkFooter url={content.url} key={i} label={content.label}>
             {content.children}
           </LinkFooter>
         ))}

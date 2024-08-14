@@ -14,6 +14,7 @@ const ArrowCarousel = ({ onClick, side }: Props) => {
         side === Sides.RIGHT ? "right-0" : "left-0"
       } text-2xl bg-blue-primary bg-opacity-30 text-white p-2 rounded-full hover:bg-opacity-100 transition-colors`}
       onClick={onClick}
+      name={side === Sides.RIGHT ? "botão esquerdo" : "botão direito"}
     >
       <FaArrowRight className={`${side === Sides.RIGHT ? "" : "rotate-180"}`} />
     </button>
