@@ -55,7 +55,7 @@ export default function Home() {
         />
       </section>
       <DivSeparator
-        id="habilities"
+        id="services"
         title="Serviços"
         text="Como eu posso te ajudar?"
       />
