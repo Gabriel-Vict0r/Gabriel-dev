@@ -150,7 +150,7 @@ export default function Home() {
       </div>
       <section className="p-5 flex flex-col gap-5 items-center md:flex-row lg:px-20 xl:px-52 xl:gap-20">
         <div
-          className="w-[591px] lg:w-[991.15px] h-[562.5px] bg-blue-primary rotate-[84.91deg] rounded-full blur-[300px] absolute left-[-549px] -z-10"
+          className="w-[591px] lg:w-[991.15px] h-[562.5px] bg-blue-primary rotate-[84.91deg] rounded-full blur-[300px] absolute left-[-549px] -z-10 xl:h-[262px] xl:w-[591px]"
           id="about"
         ></div>
         <Image
@@ -183,9 +183,17 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="p-5 my-5 lg:px-20 xl:px-52">
+      <section className="p-5 my-5 lg:px-20 xl:px-52 relative">
+        <Image
+          src="Elemento 4.svg"
+          width={243.43}
+          height={358.72}
+          alt="Elemento decorativo"
+          className=" absolute left-0 -z-10 top-10"
+        />
+        <div className="w-[287.35px] h-[241.47px] bg-blue-primary rounded-full blur-[130px] rotate-[84px] absolute right-0 bottom-0 -z-10"></div>
         <div
-          className="border-t-2 border-bg-secondary border-solid w-full py-10"
+          className="border-t-2 border-bg-secondary border-solid w-full py-10 "
           id="contact"
         >
           <Form />

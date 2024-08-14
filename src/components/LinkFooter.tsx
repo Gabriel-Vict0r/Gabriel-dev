@@ -1,13 +1,13 @@
+import { ILinkFooter } from "@/models/interfaces/all";
 import Link from "next/link";
 import React from "react";
 
-type Props = {
-  url: string;
-  children: React.ReactNode;
-};
-
-const LinkFooter = ({ url, children }: Props) => {
-  return <Link href={url}>{children}</Link>;
+const LinkFooter = ({ url, children }: ILinkFooter) => {
+  return (
+    <Link href={url} className="text-xl bg-background p-2 rounded-full">
+      {children}
+    </Link>
+  );
 };
 
 export default LinkFooter;
