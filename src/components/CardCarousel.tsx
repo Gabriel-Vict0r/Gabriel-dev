@@ -39,7 +39,6 @@ const CardCarousel = ({
         width={400}
         height={400}
         alt={`Capa do ${props.name}`}
-        objectFit="contain"
         className="w-full h-[223px] rounded-t-xl object-cover"
       />
       <div className="p-5 flex flex-col gap-3 h-[204px] justify-between">
