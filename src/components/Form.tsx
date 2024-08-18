@@ -4,6 +4,8 @@ import Input from "./Input";
 import { useFormik } from "formik";
 import { schemaForm } from "@/utils/validateData";
 import ErrorMessage from "./ErrorMessage";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 type Props = {};
 
 const Form = (props: Props) => {
@@ -18,8 +20,38 @@ const Form = (props: Props) => {
     validationSchema: schemaForm,
     validateOnChange: false,
     validateOnBlur: true,
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      const templateParams = {
+        from_name: values.name,
+        message: values.message,
+        email: values.email,
+        subject: values.subject,
+        contact: values.phone,
+      };
+      try {
+        const sendEmail = await emailjs.send(
+          "service_i88yk2u",
+          "template_j4usb0r",
+          templateParams,
+          "dnO6L1lAESXXK9Now"
+        );
+        if (sendEmail.status === 200) {
+          Swal.fire({
+            title: "Enviado!",
+            text: "Seu e-mail foi enviado com sucesso!",
+            icon: "success",
+            confirmButtonText: "OK",
+          });
+        }
+        formik.resetForm();
+      } catch (error) {
+        Swal.fire({
+          title: "Erro",
+          text: `Ocorreu um erro ao enviar o seu email ${String(error)}`,
+          icon: "error",
+          confirmButtonText: "OK",
+        });
+      }
     },
   });
   return (

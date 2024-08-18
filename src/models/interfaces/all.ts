@@ -136,3 +136,8 @@ export interface IFormData {
     email: string;
     phone: string;
 }
+export interface ILinkFooter {
+    url: string;
+    children: React.ReactNode;
+    label: string;
+};

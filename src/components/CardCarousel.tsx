@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 import LinkCard from "./LinkCard";
 import { IContributions, IRepositoryProject } from "@/models/interfaces/all";
+import { Types } from "@/models/enums/all";
 
 interface IRepo {
   owner: string;
@@ -42,13 +43,13 @@ const CardCarousel = ({
         className="w-full h-[223px] rounded-t-xl object-cover"
       />
       <div className="p-5 flex flex-col gap-3 h-[204px] justify-between">
-        <h5 className="font-semibold text-xl">{props.name}</h5>
+        <p className="font-semibold text-xl">{props.name}</p>
         <p className="font-extralight text-base">{props.description}</p>
         <div className="flex itens-center justify-end gap-5 text-2xl">
-          <LinkCard link={props.html_url}>
+          <LinkCard link={props.html_url} type={Types.GITHUB}>
             <FaGithub />
           </LinkCard>
-          <LinkCard link={props.homepage}>
+          <LinkCard link={props.homepage} type={Types.DEPLOY}>
             <FaLink />
           </LinkCard>
         </div>

@@ -55,7 +55,7 @@ export default function Home() {
         />
       </section>
       <DivSeparator
-        id="habilities"
+        id="services"
         title="Serviços"
         text="Como eu posso te ajudar?"
       />
@@ -148,11 +148,11 @@ export default function Home() {
           Desenvolvedor FullStack &lt;/&gt; Desenvolvedor FullStack &lt;/&gt;
         </h2>
       </div>
-      <section
-        className="p-5 flex flex-col gap-5 items-center md:flex-row lg:px-20 xl:px-52 xl:gap-20"
-        id="about"
-      >
-        <div className="w-[591px] lg:w-[991.15px] h-[562.5px] bg-blue-primary rotate-[84.91deg] rounded-full blur-[300px] absolute left-[-549px] -z-10"></div>
+      <section className="p-5 flex flex-col gap-5 items-center md:flex-row lg:px-20 xl:px-52 xl:gap-20">
+        <div
+          className="w-[591px] lg:w-[991.15px] h-[562.5px] bg-blue-primary rotate-[84.91deg] rounded-full blur-[300px] absolute left-[-549px] -z-10 xl:h-[262px] xl:w-[591px]"
+          id="about"
+        ></div>
         <Image
           src="/profile.png"
           width={428.56}
@@ -164,14 +164,14 @@ export default function Home() {
           <h3 className="font-semibold text-3xl">Quem sou eu</h3>
           <p className="font-extralight w-11/12 text-base">
             Desenvolvedor FullStack apaixonado por transformar ideias em
-            soluções digitais eficientes e inovadoras. Com mais de 2 anos de
+            soluções digitais eficientes e inovadoras. Com um bom tempo de
             experiência na criação de aplicações robustas e escaláveis, sou
             formado pelo IFBA - campus Barreiras e atualmente curso Análise e
-            Desenvolvimento de Sistemas. Minha expertise abrange um sólido
-            domínio de JavaScript/TypeScript, Next.js, Node.js, PostgreSQL,
-            entre outras ferramentas essenciais do ecossistema web. Atuo como
-            desenvolvedor de software, focado em entregar resultados que
-            combinam qualidade técnica e inovação.
+            Desenvolvimento de Sistemas. Possuo sólidos conhecimentos das
+            linguagens em JavaScript/TypeScript, Next.js, Node.js, PostgreSQL,
+            entre outras ferramentas essenciais do ecossistema web. Atualmente
+            atuo como desenvolvedor de software, focado em entregar resultados
+            que combinam qualidade técnica e inovação.
           </p>
           <Image
             src="circle-about-me.svg"
@@ -185,15 +185,15 @@ export default function Home() {
 
       <section className="p-5 my-5 lg:px-20 xl:px-52 relative">
         <Image
-          src="/Elemento 4.svg"
-          width={223.43}
+          src="Elemento 4.svg"
+          width={243.43}
           height={358.72}
-          alt="elemento decorativo"
-          className="absolute top-10 left-0 -z-10"
+          alt="Elemento decorativo"
+          className=" absolute left-0 -z-10 top-10"
         />
-        <div className="w-[487.35px] h-[441.47px] bg-blue-primary blur-[200px] rotate-[84.91deg] absolute -right-[400px] bottom-0 -z-10"></div>
+        <div className="w-[287.35px] h-[241.47px] bg-blue-primary rounded-full blur-[130px] rotate-[84px] absolute right-0 bottom-0 -z-10"></div>
         <div
-          className="border-t-2 border-bg-secondary border-solid w-full py-10"
+          className="border-t-2 border-bg-secondary border-solid w-full py-10 "
           id="contact"
         >
           <Form />

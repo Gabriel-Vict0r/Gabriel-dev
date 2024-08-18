@@ -21,7 +21,7 @@ const CardService = ({ title, paragraph, imageUrl }: ICardContent) => {
         className="w-[154px]"
       />
       <div>
-        <h4 className="font-semibold text-xl mb-2">{title}</h4>
+        <p className="font-semibold text-xl mb-2">{title}</p>
         <p className="font-light text-base">{paragraph}</p>
       </div>
     </div>
