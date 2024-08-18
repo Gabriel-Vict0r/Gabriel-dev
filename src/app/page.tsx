@@ -37,7 +37,6 @@ export default function Home() {
             impactar positivamente sua empresa e seus usuários.
           </p>
         </div>
-
         <Image
           src="/Computador.svg"
           width={525}
@@ -45,7 +44,6 @@ export default function Home() {
           alt="Ilustração de um computador"
           className="w-[325px] xl:w-[525px]"
         />
-
         <Image
           src="/section1-light-right.png"
           width={326.75}

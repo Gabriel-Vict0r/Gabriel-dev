@@ -11,9 +11,10 @@ type INavLink = { name: string; route: string }[];
 const Header = () => {
   const navLinks: INavLink = [
     { name: "Início", route: "#inicio" },
-    { name: "Sobre", route: "#about" },
-    { name: "Projetos", route: "#projects" },
     { name: "Serviços", route: "#services" },
+    { name: "Habilidades", route: "#habilities" },
+    { name: "Projetos", route: "#projects" },
+    { name: "Sobre", route: "#about" },
     { name: "Contate-me", route: "#contact" },
   ];
   const [showNav, setShowNav] = useState<boolean>(false);
@@ -31,10 +32,6 @@ const Header = () => {
       window.scrollY > 20 ? setScrolling(true) : setScrolling(false)
     );
   }, []);
-
-  const handleScroll = () => {
-    console.log("scroll ", scrolling);
-  };
   return (
     <header
       className={`p-5 xl:px-52 lg:flex w-full lg:justify-between fixed top-0 ${
