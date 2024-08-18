@@ -26,13 +26,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${inter.className} bg-background text-white-standard`}>
-        <Image
-          src="/section1-light-left.png"
-          width={433.19}
-          height={262.5}
-          alt="ponto de luz"
-          className="absolute -left-4 -z-10 top-0 md:-top-10 md:-left-24"
-        />
+        <div
+          className="w-[823.19px] h-[562.5px] bg-blue-primary blur-[300px] rotate-[84.19deg] absolute -left-[700px] -z-10 top-0"
+          aria-label="ponto de luz ilustrado"
+        ></div>
+
         <Header />
         {children}
       </body>

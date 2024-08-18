@@ -37,15 +37,15 @@ export default function Home() {
             impactar positivamente sua empresa e seus usuários.
           </p>
         </div>
-        <div className="relative p-5 md:w-1/2">
-          <Image
-            src="/Computador.svg"
-            width={525}
-            height={492}
-            alt="Ilustração de um computador"
-            className="w-10/12 md:w-full lg:w-4/5"
-          />
-        </div>
+
+        <Image
+          src="/Computador.svg"
+          width={525}
+          height={492}
+          alt="Ilustração de um computador"
+          className="w-[325px] xl:w-[525px]"
+        />
+
         <Image
           src="/section1-light-right.png"
           width={326.75}
@@ -148,11 +148,11 @@ export default function Home() {
           Desenvolvedor FullStack &lt;/&gt; Desenvolvedor FullStack &lt;/&gt;
         </h2>
       </div>
-      <section className="p-5 flex flex-col gap-5 items-center md:flex-row lg:px-20 xl:px-52 xl:gap-20">
-        <div
-          className="w-[591px] lg:w-[991.15px] h-[562.5px] bg-blue-primary rotate-[84.91deg] rounded-full blur-[300px] absolute left-[-549px] -z-10"
-          id="about"
-        ></div>
+      <section
+        className="p-5 flex flex-col gap-5 items-center md:flex-row lg:px-20 xl:px-52 xl:gap-20"
+        id="about"
+      >
+        <div className="w-[591px] lg:w-[991.15px] h-[562.5px] bg-blue-primary rotate-[84.91deg] rounded-full blur-[300px] absolute left-[-549px] -z-10"></div>
         <Image
           src="/profile.png"
           width={428.56}
@@ -183,7 +183,15 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="p-5 my-5 lg:px-20 xl:px-52">
+      <section className="p-5 my-5 lg:px-20 xl:px-52 relative">
+        <Image
+          src="/Elemento 4.svg"
+          width={223.43}
+          height={358.72}
+          alt="elemento decorativo"
+          className="absolute top-10 left-0 -z-10"
+        />
+        <div className="w-[487.35px] h-[441.47px] bg-blue-primary blur-[200px] rotate-[84.91deg] absolute -right-[400px] bottom-0 -z-10"></div>
         <div
           className="border-t-2 border-bg-secondary border-solid w-full py-10"
           id="contact"
