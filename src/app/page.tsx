@@ -152,7 +152,7 @@ export default function Home() {
           id="about"
         ></div>
         <Image
-          src="/profile.png"
+          src="/gabriel-dev.png"
           width={428.56}
           height={462.04}
           alt="Minha foto de perfil"
